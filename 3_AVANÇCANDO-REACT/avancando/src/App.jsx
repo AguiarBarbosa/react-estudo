@@ -8,6 +8,13 @@ import ShowUserName from './Components/ShowUserName';
 import CarDetails from './Components/CarDetails';
 import Fragments from './Components/Fragments';
 import Container from './Components/Container';
+import ExecuteFunction from './Components/ExecuteFunction';
+import Message from './Components/Message';
+import ChangeMessageState from './Components/ChangeMessageState';
+import MeuComponenteHook from './Components/MeuComponenteHook';
+import UserDetails from './Components/UserDetails';
+
+
 
 
 function App() {
@@ -19,6 +26,24 @@ function App() {
     {id:2, brand: "KIA", color: "branco", newCar: false, km: 10000},
     {id:3, brand: "renault", color: "azul", newCar: true, km: 0}
   ]
+
+
+  function showMessage(){
+    console.log("Evento do componente pai!")
+  }
+
+const [message, setMessage] = useState("")
+
+const handleMessage = (msg) =>{
+  setMessage(msg);
+}
+
+const [saida, setSaida] = useState("")
+
+const handleSaida = (saida) =>{
+  setSaida(saida);
+}
+
   return (
     <>
       <div>
@@ -39,6 +64,7 @@ function App() {
       <CarDetails brand="Toyota" km={50000} color="Preto" newCar={false}/>
       {cars.map((car) =>(
         <CarDetails 
+        key={car.id}
         brand={car.brand} 
         color={car.brand}
         km={car.km}
@@ -48,6 +74,11 @@ function App() {
       <Container>
         <p>teste de conteudo</p>
       </Container>
+      <ExecuteFunction myFunction={showMessage}/>
+      <Message msg={message}/>
+      <ChangeMessageState handleMessage={handleMessage}/>
+      <MeuComponenteHook handleSaida={handleSaida} saida={saida}/>
+      <UserDetails/>
     </>
   )
 }
