@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": "2",
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": "3",
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "id": "4937",
+      "name": "teste",
+      "price": "12"
+    },
+    {
+      "id": "e6d8",
+      "name": "Capa de Chuva",
+      "price": "80"
+    },
+    {
+      "id": "6097",
+      "name": "teclado",
+      "price": "110"
+    },
+    {
+      "id": "0958",
+      "name": "suporte microfone",
+      "price": "20"
+    },
+    {
+      "id": "66fb",
+      "name": "suporte microfone",
+      "price": "30"
+    },
+    {
+      "id": "819f",
+      "name": "teste",
+      "price": "20"
+    }
+  ]
+}
