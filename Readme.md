@@ -1,0 +1,1 @@
+O arquivo controla os estudos.
